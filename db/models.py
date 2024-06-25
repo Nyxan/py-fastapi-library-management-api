@@ -5,7 +5,7 @@ from db.database import Base
 
 
 class Author(Base):
-    __tablename__ = 'author'
+    __tablename__ = "author"
 
     id = Column(Integer, primary_key=True)
     name = Column(String(255), nullable=False, unique=True)
@@ -14,10 +14,10 @@ class Author(Base):
 
 
 class Book(Base):
-    __tablename__ = 'books'
+    __tablename__ = "books"
 
     id = Column(Integer, primary_key=True)
     title = Column(String)
     summary = Column(String)
     publication = Column(Date)
-    author_id = Column(Integer, ForeignKey('author.id'))
+    author_id = Column(Integer, ForeignKey("author.id"))
